@@ -1,0 +1,334 @@
+/* Шаг 1: Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* БЭМ */
+
+/* хэдер */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 69, 94, 0.24);
+    border-bottom: 1px solid #ddd;
+
+
+}
+
+.header__icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__logo img {
+    height: 40px;
+}
+
+
+.header__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 70%;
+    transition: background 0.3s;
+}
+
+.header__button:hover {
+    background: #f1f1f1;
+}
+
+/* навигация */
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav__link {
+    color: #0b0707;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav__link:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.nav__link:focus {
+    outline: 2px solid #6e91fa;
+    outline-offset: 2px;
+}
+
+.hero {
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 30px;
+    background: #f1f1f1;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #868a93;
+
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #003f60;
+}
+
+.hero__description {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero__image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* фичи */
+.features {
+    padding: 3rem 2rem;
+    background-color: rgba(0, 69, 94, 0.24);
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #001a61;
+}
+
+.features__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color:  #003f60;
+}
+
+.features__table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.features__cell {
+    padding: 1.5rem;
+    vertical-align: top;
+}
+
+.features__cell img {
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+.features__cell h3 {
+    margin-bottom: 0.5rem;
+    color: #0b0707;
+}
+
+/* продукция */
+.products {
+    padding: 2rem 2rem;
+    background-color: rgba(0, 69, 94, 0.24);
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #001a61;
+}
+
+.products__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003f60;
+}
+
+.products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* карточки */
+.product-card {
+    background: #f1f1f1;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+section {
+    margin-bottom: 2rem; /* отступ снизу */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    color: #0b0707;
+}
+
+.product-card p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.product-card strong {
+    color: #0b0707;
+    font-size: 1.25rem;
+}
+
+/* кнопки */
+.button {
+    display: inline-block;
+    background-color: rgba(21, 40, 74, 0.75);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: #1e2f3a;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* подписка */
+.subscription {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f1f1f1;
+    border-radius: 30% ;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #868a93;
+
+}
+
+.subscription__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1e3a22;
+}
+
+.subscription__form {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subscription__input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    font-size: 1rem;
+}
+
+/* история */
+.story {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #868a93;
+
+    gap: 2rem;
+    background: #f1f1f1;
+}
+.story__content .button {
+     margin-top: 1.5rem;
+ }
+
+.story__image img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.story__content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.story__content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #003f60;
+}
+
+/* футер */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 69, 94, 0.24);
+    color: #0b0707;
+}
+
+.footer__nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.footer__link {
+    color: rgba(11, 7, 7, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__link:hover {
+    color: #2f75e1;
+}

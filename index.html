@@ -8,85 +8,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин мебели(крутой)</title>
     <link rel="icon" href="assets/icons/favicon.ico">
-
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-<header class = 'site-header'>
-    <div class="header-icons">
-
-        <button>
-            <img src="assets/icons/Search.png" alt="Поиск" width="20">
+<header class="header">
+    <div class="header__icons">
+        <button class="header__button">
+            <img src="assets/icons/Search.png" alt="Поиск">
         </button>
-        <link rel= "icon" href = "assets/img/Logo--linkedin.png" >
-
-        <a href="index.html">
-            <img src = "assets/img/logo.png" alt = "мебельный бренд" >
+        <a href="index.html" class="header__logo">
+            <img src="assets/img/logo.png" alt="Логотип мебельного бренда">
         </a>
-        <button>
-            <img src="assets/icons/Shopping--cart.png" alt="Корзина" width="20">
+        <button class="header__button">
+            <img src="assets/icons/Shopping--cart.png" alt="Корзина">
         </button>
-        <button>
-            <img src="assets/icons/User--avatar.png" alt="Профиль" width="20">
+        <button class="header__button">
+            <img src="assets/icons/User--avatar.png" alt="Профиль">
         </button>
     </div>
-
-    <nav class = 'site-nav'>
-        <a class = "main_page" href = "index.html">Главная</a>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Товары</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Главная</a></li>
+            <li><a class="nav__link" href="#products">Товары</a></li>
+            <li><a class="nav__link" href="#about">О нас</a></li>
+            <li><a class="nav__link" href="#contact">Контакты</a></li>
         </ul>
     </nav>
-
 </header>
+
 <main>
-    <section>
-        <h1>Мебельный бренд будущего с крутым дизайном</h1>
-        <p>Новая и красивая мебель с долговечной конструкцией и красивым дизайном.</p>
-        <div class="hero-image">
+    <section class="hero">
+        <h1 class="hero__title">Мебельный бренд будущего с крутым дизайном</h1>
+        <p class="hero__description">Новая и красивая мебель с долговечной конструкцией и красивым дизайном.</p>
+        <div class="hero__image">
             <img src="assets/img/Right%20Image.png" alt="Современная мебель в интерьере">
         </div>
     </section>
-    <section>
-        <h2>Что отличает наш бренд?</h2>
 
-        <table>
+    <section class="features" id="about">
+        <h2 class="features__title">Что отличает наш бренд?</h2>
+        <table class="features__table">
             <tr>
-                <td>
-                    <img src="assets/icons/Delivery.png" alt="Доставка" ><br><br>
+                <td class="features__cell">
+                    <img src="assets/icons/Delivery.png" alt="Доставка">
                     <h3>Быстрая доставка</h3>
                     <p>Получите ваш заказ на следующий день</p>
                 </td>
-
-                <td>
-                    <img src="assets/icons/Checkmark--outline.png" alt="Качество"><br><br>
+                <td class="features__cell">
+                    <img src="assets/icons/Checkmark--outline.png" alt="Качество">
                     <h3>Крутые мастера</h3>
                     <p>Ручная работа, созданная с любовью</p>
                 </td>
-
-                <td >
-                    <img src="assets/icons/Purchase.png" alt="Цены" ><br><br>
+                <td class="features__cell">
+                    <img src="assets/icons/Purchase.png" alt="Цены">
                     <h3>Доступные цены</h3>
                     <p>Наши цены оправдывают качество!</p>
                 </td>
-
-                <td>
-                    <img src="assets/icons/Sprout.png" alt="Экология"><br><br>
+                <td class="features__cell">
+                    <img src="assets/icons/Sprout.png" alt="Экология">
                     <h3>Экологичность</h3>
                     <p>Наша продукция изготовлена из переработанных материалов</p>
                 </td>
             </tr>
         </table>
     </section>
-    <section class="new-ceramics">
-        <h2>Новые изделия</h2>
-        <div class="products-grid">
+
+    <section class="products" id="products">
+        <h2 class="products__title">Новые изделия</h2>
+        <div class="products__grid">
             <article class="product-card">
                 <img src="assets/img/Photo.png" alt="Новый стул">
                 <h3>Стул</h3>
-                <p> «Невероятный» стул</p>
+                <p>«Невероятный» стул</p>
                 <p><strong>400р</strong></p>
             </article>
             <article class="product-card">
@@ -102,68 +95,66 @@
                 <p><strong>299р</strong></p>
             </article>
         </div>
-        <button>Посмотреть коллекцию</button>
+        <div style="text-align: center;">
+            <button class="button">Посмотреть коллекцию</button>
+        </div>
     </section>
-    <section class="popular-products">
-        <h2>Наши популярные товары</h2>
-        <div class="products-grid">
+
+    <section class="products">
+        <h2 class="products__title">Наши популярные товары</h2>
+        <div class="products__grid">
             <article class="product-card">
                 <img src="assets/img/Photo.png" alt="Стул популярный">
                 <h3>Стул</h3>
                 <p>Удобный и компактный стул</p>
                 <p><strong>150р</strong></p>
-
             </article>
             <article class="product-card">
                 <img src="assets/img/Large.png" alt="Диван популярный">
                 <h3>Диван</h3>
                 <p>Изумрудный диван</p>
                 <p><strong>300р</strong></p>
-
             </article>
             <article class="product-card">
                 <img src="assets/img/Photo (3).png" alt="Стул популярный">
                 <h3>Стул</h3>
                 <p>Серый стул</p>
                 <p><strong>400р</strong></p>
-
             </article>
         </div>
     </section>
 
-        <h2>Присоединяйтесь к нам!</h2>
+    <section class="subscription">
+        <h2 class="subscription__title">Присоединяйтесь к нам!</h2>
         <p>Подпишитесь на нашу рассылку о распродажах.</p>
-        <form>
-            <input type="email" placeholder="Ваш email" required>
-            <button type="submit">Подписаться</button>
+        <form class="subscription__form">
+            <input class="subscription__input" type="email" placeholder="Ваш email" required>
+            <button class="button" type="submit">Подписаться</button>
         </form>
     </section>
-    <section class="brand-story">
-        <div class="story-image">
+
+    <section class="story">
+        <div class="story__image">
             <img src="assets/img/Image.png" alt="История развития бренда">
         </div>
-        <div class="story-content">
+        <div class="story__content">
             <h2>От студии в Лондоне до глобального бренда с более чем 400 точками</h2>
-            <p> Создаем высококачественную мебель</p>
+            <p>Создаем высококачественную мебель</p>
             <p>Материалы были использованы наилучшим образом для удобства клиентов.</p>
-            <button>Узнать больше</button>
+            <button class="button">Узнать больше</button>
         </div>
     </section>
-
-
-
 </main>
-<footer>
 
+<footer class="footer" id="contact">
     <p>&copy; 2025 Мебельный бренд будущего. Все права защищены.</p>
-    <nav>
+    <nav class="footer__nav">
         <ul>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Условия использования</a></li>
-            <li><a href="#">Свяжитесь с нами</a></li>
+            <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            <li><a class="footer__link" href="#">Условия использования</a></li>
+            <li><a class="footer__link" href="#">Свяжитесь с нами</a></li>
         </ul>
     </nav>
 </footer>
-
 </body>
 </html>
