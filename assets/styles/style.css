@@ -1,4 +1,7 @@
 /* Шаг 1: Сброс стилей */
+:root {
+    --primary-color: #003f60;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +15,8 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     color: #333;
     line-height: 1.5;
+    font-size: 16px;
+
 }
 
 /* БЭМ */
@@ -513,4 +518,105 @@ section {
     .product-card {
         padding: 1rem;
     }
+}
+
+/* гамбургер-кнопка (по умолчанию скрыта, появится в mobile.css) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle__line {
+    width: 100%;
+    height: 3px;
+    background: #0b0707;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Состояние "крестик" */
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+/* Кнопка "Наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+/* для мобильных устройств */
+@media (max-width: 768px) {
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+}
+/* фидбэк */
+.nav__link:active,
+.header__button:active,
+.button:active {
+    transform: scale(0.98);
+}
+
+.nav__link:focus-visible,
+.header__button:focus-visible,
+.button:focus-visible {
+    outline: 2px solid #6e91fa;
+    outline-offset: 2px;
+}
+/* анти скролл горизонт*/
+html, body {
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }

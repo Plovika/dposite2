@@ -9,10 +9,18 @@
     <title>Магазин мебели(крутой)</title>
     <link rel="icon" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/mobile.css" media="screen and (max-width: 1024px)">
+
 </head>
 <body>
 <header class="header">
     <div class="header__icons">
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+        </button>
+
         <button class="header__button">
             <img src="assets/icons/Search.png" alt="Поиск">
         </button>
@@ -26,12 +34,13 @@
             <img src="assets/icons/User--avatar.png" alt="Профиль">
         </button>
     </div>
-    <nav class="nav">
+    <nav class="nav" id="mainNav">
         <ul class="nav__list">
             <li><a class="nav__link" href="index.html">Главная</a></li>
             <li><a class="nav__link" href="#products">Товары</a></li>
             <li><a class="nav__link" href="#about">О нас</a></li>
             <li><a class="nav__link" href="#contact">Контакты</a></li>
+
         </ul>
     </nav>
 </header>
@@ -113,7 +122,7 @@
                 <img src="assets/img/Large.png" alt="Диван популярный">
                 <h3>Диван</h3>
                 <p>Изумрудный диван</p>
-                <p><strong>300р</strong></p>
+                <p><strong>56999р</strong></p>
             </article>
             <article class="product-card">
                 <img src="assets/img/Photo (3).png" alt="Стул популярный">
@@ -186,5 +195,10 @@
         </ul>
     </nav>
 </footer>
+<!-- кнопка наверх -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+<script src="assets/scripts/menu.js"></script>
+
+
 </body>
 </html>
